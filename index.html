@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Interactive Card</title>
+</head>
+<main>
+    <div class="container-first">
+        <div class="container">
+            <div class="aside-image">
+            </div>
+        </div>
+        <div>
+            <div class="card-image">
+                <div class="circle-container">
+                    <div class="circle"></div>
+                    <div class="circle2"></div>
+                </div>
+                <div>
+                    <p class="number-card" id="card-number-change">0000 0000 0000 0000</p>
+                    <div class="name-data">
+                        <p id="name-sub">NAME</p>
+                        <p><strong id="month-sub">00</strong>/<strong id="year-sub">00</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="back-card-image">
+                <p id="cvc-change">000</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-card">
+        <div>
+            <label for="name">CARDHOLDER NAME</label><br>
+            <input type="text" id="name" class="input-1" placeholder="e. g. Jane Appleseed" oninput="setName()">
+            <p class="erro-message" id="name-erro-msg"></p>
+        </div>
+        <div>
+            <label for="card">CARD NUMBER</label><br>
+            <input type="text" name="" id="card" placeholder="e. g. 1234 5678 9123 0000" class="input-1" oninput="setCardNumber()" onkeyup="contador()" maxlength="19">
+            <p class="erro-message" id="card-erro-msg"></p>
+        </div>
+        <div>
+            <div class="padding-card">
+                <div>
+                    <label for="mm">EXP. DATE (MM/YY)</label><br>
+                    <input type="text" name="" id="mm" placeholder="MM" class="input-2" oninput="setMonth()" maxlength="2">
+                    <input type="text" name="" id="yy" placeholder="YY" class="input-2" oninput="setYear()" maxlength="2">
+                    <p class="erro-message" id="data-erro"></p>
+                </div>
+                <div>
+                    <label for="cvc">CVC</label><br>
+                    <input type="text" name="" id="cvc" placeholder="e. g. 123" class="input-3" oninput="setCvc()" maxlength="3">
+                    <p class="erro-message" id="cvc-erro-msg"></p>
+                </div>
+            </div>
+            <button onclick="confirm()">Confirm</button>
+        </div>
+        <div></div>
+    </div>
+</main>
+<script src="./index.js"></script>
+<body>
+
+</body>
+
+</html>
