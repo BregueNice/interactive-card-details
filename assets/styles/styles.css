@@ -189,3 +189,29 @@ input::-webkit-inner-spin-button {
     color: var(--red-error);
     opacity: 0.7;
 }
+
+.container-finish{
+    width: 50vw;
+    height: 100vh;
+    display: none;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-finish div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-finish div h2{
+    color: var(--very-dark-violet);
+    letter-spacing: 4px;
+}
+
+.container-finish div p{
+    color: var(--dark-violet);
+    font-size: 18px;
+}

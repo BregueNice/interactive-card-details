@@ -9,7 +9,7 @@ let inputCard = document.getElementById('card');
 let inputName = document.getElementById('name');
 let inputDataMM = document.getElementById('mm');
 let inputDataYY = document.getElementById('yy');
-
+let inputCvc = document.getElementById('cvc');
 
 function setCardNumber() {
     let input = document.getElementById('card');
@@ -64,13 +64,19 @@ function confirm() {
         let erro = document.getElementById('data-erro');
         erro.innerHTML = "can't be blank"
         inputDataYY.classList.add('erro')
+    } if (inputCvc.value == "") {
+        let erro = document.getElementById('cvc-erro-msg');
+        erro.innerHTML = "can't be blank";
+        inputCvc.classList.add('erro');
+    }else{
+        document.getElementById('container-card-1').style.display = "none";
+        document.getElementById('box2').style.display = "flex";
     }
-
-
-    let erroRemove = document.getElementsByClassName('erro');
-    if(erroRemove.length >= 0){
-    erroRemove[0].classList.remove('erro');
-    erroRemove[0].classList.remove('erro');
-    }
-    console.log(document.getElementsByClassName('erro'));
+    //  else {
+    //     let erroRemove = document.getElementsByClassName('erro');
+    //     if (erroRemove.length >= 0) {
+    //         erroRemove[0].classList.remove('erro');
+    //         erroRemove[0].classList.remove('erro');
+    //     }
+    // }
 }
