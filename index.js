@@ -44,33 +44,39 @@ function contador() {
 }
 
 function confirm() {
-    if (inputCard.value == "") {
+    if (inputCard.value.match(/[a-z]/i)) {
         let erro = document.getElementById('card-erro-msg');
-        erro.innerHTML = "can't be blank"
+        erro.innerHTML = "Wrong format, numbers only."
         inputCard.classList.add('erro');
-    } if (inputName.value == "") {
-        let erro = document.getElementById('name-erro-msg');
-        erro.innerHTML = "can't be blank"
-        inputName.classList.add('erro')
-    } if (inputName.value == "") {
-        let erro = document.getElementById('name-erro-msg');
-        erro.innerHTML = "can't be blank"
-        inputName.classList.add('erro')
-    } if (inputDataMM.value == "") {
-        let erro = document.getElementById('data-erro');
-        erro.innerHTML = "can't be blank"
-        inputDataMM.classList.add('erro')
-    } if (inputDataYY.value == "") {
-        let erro = document.getElementById('data-erro');
-        erro.innerHTML = "can't be blank"
-        inputDataYY.classList.add('erro')
-    } if (inputCvc.value == "") {
-        let erro = document.getElementById('cvc-erro-msg');
-        erro.innerHTML = "can't be blank";
-        inputCvc.classList.add('erro');
-    }else{
-        document.getElementById('container-card-1').style.display = "none";
-        document.getElementById('box2').style.display = "flex";
+    } else {
+        if (inputCard.value == "") {
+            let erro = document.getElementById('card-erro-msg');
+            erro.innerHTML = "can't be blank"
+            inputCard.classList.add('erro');
+        } if (inputName.value == "") {
+            let erro = document.getElementById('name-erro-msg');
+            erro.innerHTML = "can't be blank"
+            inputName.classList.add('erro')
+        } if (inputName.value == "") {
+            let erro = document.getElementById('name-erro-msg');
+            erro.innerHTML = "can't be blank"
+            inputName.classList.add('erro')
+        } if (inputDataMM.value == "") {
+            let erro = document.getElementById('data-erro');
+            erro.innerHTML = "can't be blank"
+            inputDataMM.classList.add('erro')
+        } if (inputDataYY.value == "") {
+            let erro = document.getElementById('data-erro');
+            erro.innerHTML = "can't be blank"
+            inputDataYY.classList.add('erro')
+        } if (inputCvc.value == "") {
+            let erro = document.getElementById('cvc-erro-msg');
+            erro.innerHTML = "can't be blank";
+            inputCvc.classList.add('erro');
+        } else {
+            document.getElementById('container-card-1').style.display = "none";
+            document.getElementById('box2').style.display = "flex";
+        }
     }
     //  else {
     //     let erroRemove = document.getElementsByClassName('erro');

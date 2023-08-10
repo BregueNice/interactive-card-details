@@ -16,7 +16,7 @@
 }
 
 .aside-image {
-    width: 25vw;
+    width: 450px;
     height: 100vh;
     background: url('../images/bg-main-desktop.png') no-repeat;
     background-size: cover;
